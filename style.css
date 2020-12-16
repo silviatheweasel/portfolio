@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: grid;
+}
+
+header {
+    background-color: #281B59;
+    color: white;
+    min-height: 37rem;
+}
+
+nav {
+    height: 4rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    float: right;
+    margin: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.banner {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: repeat (6, 1fr) / repeat(12, 1fr);
+}
+
+.my-name {
+    grid-area: 2 / 3 / span 3 / span 6;
+}
+
+.my-intro {
+    grid-area: 2 / 8 / span 3 / span 4;
+}
