@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
+/*     border: 1px solid red; */
 }
 
 html {
@@ -40,14 +40,109 @@ nav ul li a {
 .banner {
     display: grid;
     width: 100%;
-    height: 100%;
-    grid-template: repeat (6, 1fr) / repeat(12, 1fr);
+    height: 80%;
+    grid-template: repeat(6, 1fr) / repeat(12, 1fr);
 }
 
 .my-name {
-    grid-area: 2 / 3 / span 3 / span 6;
+    grid-area: 2 / 2 / span 5 / span 5;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.7rem;
+    font-weight: 900;
 }
 
+.silvia {
+    display: flex;
+    flex-direction: row;
+    color: #F24957;
+
+}
+
+.letter-i {
+    width: 1rem;
+    position: relative;
+}
+
+.circle {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #F24957;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    16.6% {
+        transform: translateY(-40px);
+    }
+    33.3% {
+        transform: translateY(0);
+    }
+    49.9% {
+        transform: translateY(-20px);
+    }
+     66.5% {
+        transform: translateY(0);
+    }
+    83.1% {
+        transform: translateY(-70px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rectangle {
+    height: 3.5rem;
+    width: 0.7rem;
+    background-color: white; 
+    position: absolute;
+    top: 3.3rem;
+}
+
+.lvia {
+    margin-left: 0.5rem;
+}
+
+@keyframes floatIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatDown {
+        from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.silvia {
+    animation: floatDown 1s ease-in;
+}
+
+.lee {
+    animation: floatIn 1s ease-in;
+    margin-left: 200px;
+}
+
+
 .my-intro {
-    grid-area: 2 / 8 / span 3 / span 4;
+    grid-area: 2 / 7 / span 5 / span 5;
+}
+
+h1 {
+     font-family: "Work Sans", sans-serif;
+    font-size: 45px;
 }
