@@ -1,63 +1,70 @@
 
 function showContentColmar() {
+    document.getElementById('container').style.display = "block";
     document.getElementById('colmar').style.display = "grid";
     document.getElementById('slide-show').style.display = "none";
 }
 
-function closeContentColmar() {
-    document.getElementById('colmar').style = "";
-    document.getElementById('slide-show').style = "";
-}
-
-document.getElementById('image1').addEventListener("click", showContentColmar);
-document.getElementById('close-colmar').addEventListener('click', closeContentColmar);
-
 function showContentBlog() {
-    document.getElementById('blog').style.display = "grid";
-    document.getElementById('slide-show').style.display = "none";
+  document.getElementById('container').style.display = "block";
+  document.getElementById('blog').style.display = "grid";
+  document.getElementById('slide-show').style.display = "none";
 }
 
-function closeContentBlog() {
-    document.getElementById('blog').style = "";
-    document.getElementById('slide-show').style = "";
+function showContentBR() {
+  document.getElementById('container').style.display = "block";
+  document.getElementById('BR').style.display = "grid";
+  document.getElementById('slide-show').style.display = "none";
+}
+
+function closeContent() {
+  document.getElementById('slide-show').style = "";
+  document.getElementById('container').style = "";
+  for (let i = 0; i < projects.length; i++) {
+    projects[i].style.display = "none";
+  }
+  
 }
 
 document.getElementById('image2').addEventListener("click", showContentBlog);
-document.getElementById('close-blog').addEventListener('click', closeContentBlog);
-
-function showContentBR() {
-    document.getElementById('BR').style.display = "grid";
-    document.getElementById('slide-show').style.display = "none";
-}
-
-function closeContentBR() {
-    document.getElementById('BR').style = "";
-    document.getElementById('slide-show').style = "";
-}
-
+document.getElementById('image1').addEventListener("click", showContentColmar);
 document.getElementById('image3').addEventListener("click", showContentBR);
-document.getElementById('close-BR').addEventListener('click', closeContentBR);
+document.getElementById('close').addEventListener('click', closeContent);
 
-var projectIndex = 1;
-showProjects(projectIndex);
+
+let projectIndex = 0;
+let projects = document.getElementsByClassName("project-container");
 
 // Next/previous controls
 function plusProjects(n) {
-  showProjects(projectIndex += n);
-}
-
-// Thumbnail image controls
-function currentProject(n) {
-  showProjects(projectIndex = n);
-}
-
-function showProjects(n) {
-  var i;
-  var projects = document.getElementsByClassName("project-container");
-  if (n > projects.length) {projectIndex = 1}
-  if (n < 1) {projectIndex = projects.length}
-  for (i = 0; i < projects.length; i++) {
+  for (let i = 0; i < projects.length; i++) {
     projects[i].style.display = "none";
   }
-  projects[projectIndex-1].style.display = "grid";
+  if (n < 0) {
+    showProjects1(projectIndex += n);
+  } else {
+    showProjects2(projectIndex += n);
+  }
+}
+
+function showProjects1(num) {
+  if (num >= projects.length) {projectIndex = 0;}
+  if (num <= -1) {projectIndex = projects.length - 1}
+  // for (let i = 0; i < projects.length; i++) {
+  //   projects[i].style.display = "none";
+  // }
+  projects[projectIndex].style.display = "grid";
+  projects[projectIndex].style.animation = "fromLeft 1s ease";
+  // projects[projectIndex+1].style.animation = "rightOut 1s ease";
+}
+
+function showProjects2(num) {
+  if (num >= projects.length) {projectIndex = 0;}
+  if (num <= -1) {projectIndex = projects.length - 1}
+  // for (i = 0; i < projects.length; i++) {
+  //   projects[i].style.display = "none";
+  // }
+  projects[projectIndex].style.display = "grid";
+  projects[projectIndex].style.animation = "fromRight 1s ease";   
+  // projects[projectIndex-1].style.animation = "leftOut 1s ease";
 }

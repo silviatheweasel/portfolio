@@ -91,83 +91,92 @@
             </div>
 
 
-            <div class="container">
+            <div id="container">
+                <div class="close-windows">
+                    <i id= "close" class="far fa-times-circle"></i>
+                </div>
+                <div class="project-container" id="colmar">
+                    <div class="project-video">
+                        <video controls autoplay muted loop >
+                            <source src="Resources/Media files/Videos/colmar acadamy.mov">
+                            Your browser does not support the video tag.
+                        </video>  
+                    </div>
+                    <div class="project-images">
+                        <img src="Resources/Media files/Images/colmar-academy-mobile-1.png" alt ="a screenshot of the Colmar Academy website's mobile version">
+                        <img src="Resources/Media files/Images/colmar-academy-mobile-2.png" alt ="a screenshot of the Colmar Academy website's mobile version">
+                    </div>
+                    <div class="project-intro">
+                        <h2>Colmar Academy</h2>
+                        <p>This is a front-end development excercise project that I completed based on a design template on Codecademy. The completed website is fully responsive on devices of various sizes. </p>
+                    </div>
+                    <div class="technology">
+                        <p>Technology used in this project </p>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-git"></i>
+                    </div>
+                    
 
-            <div class="project-container" id="colmar">
-                <div class="close-window">
-                    <i id= "close-colmar" class="far fa-times-circle"></i>
                 </div>
-                <div class="project-video">
-                    <video controls autoplay muted loop >
-                        <source src="Resources/Media files/Videos/colmar acadamy.mov">
-                        Your browser does not support the video tag.
-                    </video>  
+
+                <div class="project-container" id="blog">
+                    <!-- <div class="close-window">
+                        <i id= "close-blog" class="far fa-times-circle"></i>
+                    </div> -->
+                    <div class="project-video">
+                        <video controls autoplay muted loop>
+                            <source src="Resources/Media files/Videos/my-blog.mov">
+                            Your browser does not support the video tag.
+                        </video>  
+                    </div>
+                    <div class="project-images">
+                        <img src="./Resources/Media files/Images/Blog-mobile1.png" alt ="a screenshot of a blog template website's mobile version">
+                        <img src="./Resources/Media files/Images/Blog-mobile2.png" alt ="a screenshot of a blog template website's mobile version">
+                    </div>
+                    <div class="project-intro">
+                        <h2>Blog</h2>
+                        <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
+                    </div>
+                    <div class="technology">
+                        <p>Technology used in this project </p>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-git"></i>
+                    </div>
+                    
                 </div>
-                <div class="project-images">
-                    <img src="Resources/Media files/Images/colmar-academy-mobile-1.png" alt ="a screenshot of the Colmar Academy website's mobile version">
-                    <img src="Resources/Media files/Images/colmar-academy-mobile-2.png" alt ="a screenshot of the Colmar Academy website's mobile version">
+
+                <div class="project-container" id="BR">
+                    <!-- <div class="close-window">
+                        <i id= "close-BR" class="far fa-times-circle"></i>
+                    </div> -->
+                    <div class="project-video">
+                        <video controls autoplay muted loop>
+                            <source src="Resources/Media files/Videos/BA architects.mov">
+                            Your browser does not support the video tag.
+                        </video>  
+                    </div>
+                    <div class="project-images">
+                        <img src="Resources/Media files/Images/BR-mobile1.png" alt ="a screenshot of BR Architects website's mobile version">
+                        <img src="Resources/Media files/Images/BR-mobile2.png" alt ="a screenshot of BR Architects website's mobile version">
+                    </div>
+                    <div class="project-intro">
+                        <h2>BR Architects</h2>
+                        <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>                      
+                    </div>
+                    <div class="technology">
+                        <p>Technology used in this project </p>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-git"></i>
+                    </div>
+                    
                 </div>
-                <div class="project-intro">
-                    <h2>Colmar Academy</h2>
-                    <p>This is a front-end development excercise project that I completed based on a design template on Codecademy. The completed website is fully responsive on devices of various sizes. </p>
-                    <p>Technology used in this program: </p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-git"></i>
-                </div>
-                <button class="previous" onclick="plusProjects(-1)">Last</button>
-                <button class="next" onclick="plusProjects(1)">Next</button>
+
+                <button class="previous-btn" onclick="plusProjects(-1)"><i class="fas fa-arrow-circle-left"></i></button>
+                <button class="next-btn" onclick="plusProjects(1)"><i class="fas fa-arrow-circle-right"></i></button>
             </div>
-
-            <div class="project-container" id="blog">
-                <div class="close-window">
-                    <i id= "close-blog" class="far fa-times-circle"></i>
-                </div>
-                <div class="project-video">
-                    <video controls autoplay muted loop>
-                        <source src="Resources/Media files/Videos/my-blog.mov">
-                        Your browser does not support the video tag.
-                    </video>  
-                </div>
-                <div class="project-images">
-                    <img src="./Resources/Media files/Images/Blog-mobile1.png" alt ="a screenshot of a blog template website's mobile version">
-                    <img src="./Resources/Media files/Images/Blog-mobile2.png" alt ="a screenshot of a blog template website's mobile version">
-                </div>
-                <div class="project-intro">
-                    <h2>Blog</h2>
-                    <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
-                    <p>Technology used in this program: </p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-git"></i>
-                </div>
-            </div>
-
-            <div class="project-container" id="BR">
-                <div class="close-window">
-                    <i id= "close-BR" class="far fa-times-circle"></i>
-                </div>
-                <div class="project-video">
-                    <video controls autoplay muted loop>
-                        <source src="Resources/Media files/Videos/BA architects.mov">
-                        Your browser does not support the video tag.
-                    </video>  
-                </div>
-                <div class="project-images">
-                    <img src="Resources/Media files/Images/BR-mobile1.png" alt ="a screenshot of BR Architects website's mobile version">
-                    <img src="Resources/Media files/Images/BR-mobile2.png" alt ="a screenshot of BR Architects website's mobile version">
-                </div>
-                <div class="project-intro">
-                    <h2>Blog</h2>
-                    <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
-                    <p>Technology used in this program: </p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-git"></i>
-                </div>
-            </div>
-
-        </div>
 
         </section>
 
