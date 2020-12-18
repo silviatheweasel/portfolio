@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <script src="./home.js" defer></script>
+    <script src="./slideShow.js" defer></script>
+    <script src="./projectContentDisplay.js" defer></script>
     <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -56,39 +57,43 @@
 
     <main>
         <section id="projects">
-                        <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                <img src="./Resources/Media files/Images/image1.jpg" style="width:100%" alt="screenshot of a demo website Colmar Academy">
-                <!-- <div class="text">A web development exercise project</div> -->
+            <div id="slide-show">
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade" id ="image1">
+                    <img  src="./Resources/Media files/Images/image1.jpg" style="width:100%" alt="screenshot of a demo website Colmar Academy">
+                    <!-- <div class="text">A web development exercise project</div> -->
+                    </div>
+                
+                    <div class="mySlides fade" id="image2">
+                    <img src="./Resources/Media files/Images/image2.jpg" style="width:100%" alt="screenshot of a demo blog">
+                    <!-- <div class="text">A blog-themed web development project </div> -->
+                    </div>
+                
+                    <div class="mySlides fade" id="image3"> 
+                    <img src="./Resources/Media files/Images/image3.jpg" style="width:100%" alt="screenshot of a demo wensite BR Architects">
+                    <!-- <div class="text">A web development exercise project</div> -->
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-            
-                <div class="mySlides fade">
-                <img src="./Resources/Media files/Images/image2.jpg" style="width:100%" alt="screenshot of a demo blog">
-                <!-- <div class="text">A blog-themed web development project </div> -->
+                
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-            
-                <div class="mySlides fade">
-                <img src="./Resources/Media files/Images/image3.jpg" style="width:100%" alt="screenshot of a demo wensite BR Architects">
-                <!-- <div class="text">A web development exercise project</div> -->
-                </div>
-            
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <br>
-            
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
 
-            <div id="project-container">
+            <div class="project-container" id="colmar">
+                <div class="close-window">
+                    <i id= "close-colmar" class="far fa-times-circle"></i>
+                </div>
                 <div class="project-video">
                     <video controls autoplay muted>
                         <source src="Resources/Media files/Videos/colmar acadamy.mov">
@@ -102,6 +107,55 @@
                 <div class="project-intro">
                     <h2>Colmar Academy</h2>
                     <p>This is a front-end development excercise project that I completed based on a design template on Codecademy. The completed website is fully responsive on devices of various sizes. </p>
+                    <p>Technology used in this program: </p>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-git"></i>
+                </div>
+                <!-- <button id="right">Right</button> -->
+            </div>
+
+            <div class="project-container" id="blog">
+                <div class="close-window">
+                    <i id= "close-blog" class="far fa-times-circle"></i>
+                </div>
+                <div class="project-video">
+                    <video controls autoplay muted>
+                        <source src="Resources/Media files/Videos/my-blog.mov">
+                        Your browser does not support the video tag.
+                    </video>  
+                </div>
+                <div class="project-images">
+                    <img src="./Resources/Media files/Images/Blog-mobile1.png" alt ="a screenshot of a blog template website's mobile version">
+                    <img src="./Resources/Media files/Images/Blog-mobile2.png" alt ="a screenshot of a blog template website's mobile version">
+                </div>
+                <div class="project-intro">
+                    <h2>Blog</h2>
+                    <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
+                    <p>Technology used in this program: </p>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-git"></i>
+                </div>
+            </div>
+
+            <div class="project-container" id="BR">
+                <div class="close-window">
+                    <i id= "close-BR" class="far fa-times-circle"></i>
+                </div>
+                <div class="project-video">
+                    <video controls autoplay muted>
+                        <source src="Resources/Media files/Videos/BA architects.mov">
+                        Your browser does not support the video tag.
+                    </video>  
+                </div>
+                <div class="project-images">
+                    <img src="Resources/Media files/Images/BR-mobile1.png" alt ="a screenshot of BR Architects website's mobile version">
+                    <img src="Resources/Media files/Images/BR-mobile2.png" alt ="a screenshot of BR Architects website's mobile version">
+                </div>
+                <div class="project-intro">
+                    <h2>Blog</h2>
+                    <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
                     <p>Technology used in this program: </p>
                     <i class="fab fa-html5"></i>
                     <i class="fab fa-css3-alt"></i>
