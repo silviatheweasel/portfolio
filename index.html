@@ -90,12 +90,15 @@
                 </div>
             </div>
 
+
+            <div class="container">
+
             <div class="project-container" id="colmar">
                 <div class="close-window">
                     <i id= "close-colmar" class="far fa-times-circle"></i>
                 </div>
                 <div class="project-video">
-                    <video controls autoplay muted>
+                    <video controls autoplay muted loop >
                         <source src="Resources/Media files/Videos/colmar acadamy.mov">
                         Your browser does not support the video tag.
                     </video>  
@@ -112,7 +115,8 @@
                     <i class="fab fa-css3-alt"></i>
                     <i class="fab fa-git"></i>
                 </div>
-                <!-- <button id="right">Right</button> -->
+                <button class="previous" onclick="plusProjects(-1)">Last</button>
+                <button class="next" onclick="plusProjects(1)">Next</button>
             </div>
 
             <div class="project-container" id="blog">
@@ -120,7 +124,7 @@
                     <i id= "close-blog" class="far fa-times-circle"></i>
                 </div>
                 <div class="project-video">
-                    <video controls autoplay muted>
+                    <video controls autoplay muted loop>
                         <source src="Resources/Media files/Videos/my-blog.mov">
                         Your browser does not support the video tag.
                     </video>  
@@ -144,7 +148,7 @@
                     <i id= "close-BR" class="far fa-times-circle"></i>
                 </div>
                 <div class="project-video">
-                    <video controls autoplay muted>
+                    <video controls autoplay muted loop>
                         <source src="Resources/Media files/Videos/BA architects.mov">
                         Your browser does not support the video tag.
                     </video>  
@@ -162,6 +166,8 @@
                     <i class="fab fa-git"></i>
                 </div>
             </div>
+
+        </div>
 
         </section>
 

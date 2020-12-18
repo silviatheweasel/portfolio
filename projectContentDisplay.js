@@ -37,3 +37,27 @@ function closeContentBR() {
 
 document.getElementById('image3').addEventListener("click", showContentBR);
 document.getElementById('close-BR').addEventListener('click', closeContentBR);
+
+var projectIndex = 1;
+showProjects(projectIndex);
+
+// Next/previous controls
+function plusProjects(n) {
+  showProjects(projectIndex += n);
+}
+
+// Thumbnail image controls
+function currentProject(n) {
+  showProjects(projectIndex = n);
+}
+
+function showProjects(n) {
+  var i;
+  var projects = document.getElementsByClassName("project-container");
+  if (n > projects.length) {projectIndex = 1}
+  if (n < 1) {projectIndex = projects.length}
+  for (i = 0; i < projects.length; i++) {
+    projects[i].style.display = "none";
+  }
+  projects[projectIndex-1].style.display = "grid";
+}
