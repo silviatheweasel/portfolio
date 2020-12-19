@@ -1,20 +1,23 @@
+let projects = document.getElementsByClassName("project-container");
+
+function showContent() {
+  document.getElementById('slide-show').style.display = "none";
+  document.getElementById('container').style.display = "block";
+}
 
 function showContentColmar() {
-    document.getElementById('container').style.display = "block";
-    document.getElementById('colmar').style.display = "grid";
-    document.getElementById('slide-show').style.display = "none";
+  showContent();
+  document.getElementById('colmar').style.display = "grid";
 }
 
 function showContentBlog() {
-  document.getElementById('container').style.display = "block";
+  showContent();
   document.getElementById('blog').style.display = "grid";
-  document.getElementById('slide-show').style.display = "none";
 }
 
 function showContentBR() {
-  document.getElementById('container').style.display = "block";
+  showContent();
   document.getElementById('BR').style.display = "grid";
-  document.getElementById('slide-show').style.display = "none";
 }
 
 function closeContent() {
@@ -33,7 +36,7 @@ document.getElementById('close').addEventListener('click', closeContent);
 
 
 let projectIndex = 0;
-let projects = document.getElementsByClassName("project-container");
+
 
 // Next/previous controls
 function plusProjects(n) {
@@ -50,21 +53,13 @@ function plusProjects(n) {
 function showProjects1(num) {
   if (num >= projects.length) {projectIndex = 0;}
   if (num <= -1) {projectIndex = projects.length - 1}
-  // for (let i = 0; i < projects.length; i++) {
-  //   projects[i].style.display = "none";
-  // }
   projects[projectIndex].style.display = "grid";
   projects[projectIndex].style.animation = "fromLeft 1s ease";
-  // projects[projectIndex+1].style.animation = "rightOut 1s ease";
 }
 
 function showProjects2(num) {
   if (num >= projects.length) {projectIndex = 0;}
   if (num <= -1) {projectIndex = projects.length - 1}
-  // for (i = 0; i < projects.length; i++) {
-  //   projects[i].style.display = "none";
-  // }
   projects[projectIndex].style.display = "grid";
   projects[projectIndex].style.animation = "fromRight 1s ease";   
-  // projects[projectIndex-1].style.animation = "leftOut 1s ease";
 }
