@@ -25,6 +25,8 @@ function closeContent() {
   document.getElementById('container').style = "";
   for (let i = 0; i < projects.length; i++) {
     projects[i].style.display = "none";
+    dummyLeft[i].style = "";
+    dummyRight[i].style = "";
   }
   
 }
@@ -36,17 +38,23 @@ document.getElementById('close').addEventListener('click', closeContent);
 
 
 let projectIndex = 0;
+let dummyLeft = document.getElementsByClassName('dummy-left');
+let dummyRight = document.getElementsByClassName('dummy-right');
 
 
 // Next/previous controls
 function plusProjects(n) {
   for (let i = 0; i < projects.length; i++) {
     projects[i].style.display = "none";
+    dummyLeft[i].style.display = "none";
+    dummyRight[i].style.display = "none";
   }
+  
   if (n < 0) {
     showProjects1(projectIndex += n);
+    
   } else {
-    showProjects2(projectIndex += n);
+    showProjects2(projectIndex += n); 
   }
 }
 
@@ -55,11 +63,13 @@ function showProjects1(num) {
   if (num <= -1) {projectIndex = projects.length - 1}
   projects[projectIndex].style.display = "grid";
   projects[projectIndex].style.animation = "fromLeft 1s ease";
+  dummyRight[projectIndex].style.display = "block";
 }
 
 function showProjects2(num) {
   if (num >= projects.length) {projectIndex = 0;}
   if (num <= -1) {projectIndex = projects.length - 1}
   projects[projectIndex].style.display = "grid";
-  projects[projectIndex].style.animation = "fromRight 1s ease";   
+  projects[projectIndex].style.animation = "fromRight ease 0.5s";  
+  dummyLeft[projectIndex].style.display = "block";
 }

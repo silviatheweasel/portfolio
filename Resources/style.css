@@ -428,8 +428,8 @@ max-width: 47%;
 
 @keyframes fromRight {
     from {
-        transform: translateX(600px);
-        opacity: 0;
+        transform: translateX(50%);
+        opacity: 0.5;
     }
     to {
         transform: translateX(0);
@@ -437,17 +437,17 @@ max-width: 47%;
     }
 }
 @keyframes leftOut {
-    from {transform: translateX(0);
-        opacity: 1;
+    from {transform: translateX(-80%);
+        /* opacity: 0.5; */
     } 
     to {
-        transform: translateX(-600px);
+        transform: translateX(-150%);
         opacity: 0;
     }
 }
 @keyframes fromLeft {
     from {
-        transform: translateX(-600px);
+        transform: translateX(-50%);
         opacity: 0;
     }
     to {
@@ -458,12 +458,29 @@ max-width: 47%;
 }
 @keyframes rightOut {
     from {
-        transform: translateX(0);
-        opacity: 1;
+        transform: translateX(80%);
+        /* opacity: 0.5; */
     }
     to {
-        transform: translateX(600px);
+        transform: translateX(150%);
         opacity: 0;
     }
+}
 
+.dummy-left {
+    position: absolute;
+    top: 115px;
+    opacity: 0.5;
+    z-index: -2;
+    animation: leftOut 1s ease both;
+    display: none;
+}  
+
+.dummy-right {
+    position: absolute;
+    top: 115px;
+    /* opacity: 0.5; */
+    z-index: -1;
+    animation: rightOut 1s ease both;
+    display: none;
 }
