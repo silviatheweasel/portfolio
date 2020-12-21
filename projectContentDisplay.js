@@ -24,7 +24,7 @@ function closeContent() {
   document.getElementById('slide-show').style = "";
   document.getElementById('container').style = "";
   for (let i = 0; i < projects.length; i++) {
-    projects[i].style.display = "none";
+    projects[i].style = "";
     dummyLeft[i].style = "";
     dummyRight[i].style = "";
   }
