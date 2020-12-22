@@ -12,8 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <script src="./slideShow.js" defer></script>
-    <script src="./projectContentDisplay.js" defer></script>
+    <script src="./Resources/slideShow.js" defer></script>
+    <script src="./Resources/projectContentDisplay.js" defer></script>
+    <script src="./Resources/animationControl.js" defer></script>
     <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,23 +28,22 @@
             </ul>
         </nav>
         <div class="banner">
-            <div class= "my-name">
-                <div class="silvia">
+            <div class= "my-name show-on-scroll">
+                <div class="silvia show-on-scroll">
                     <div class="initial-s">S</div>
                     <div class="letter-i">
                         <div class="circle"></div>
                         <div class="rectangle"></div>
-                    </div>
-                    
+                    </div>                  
                     <div class="lvia">lvia</div>
                 </div>
-                <div class="lee">Lee</div>
+                <div class="lee show-on-scroll">Lee</div>
             </div>
-            <div class="chinese-name">
-                <div class="chinese-surname">李</div>
-                <div class="chinese-firstname">雪</div>
+            <div class="chinese-name show-on-scroll">
+                <div class="chinese-surname show-on-scroll">李</div>
+                <div class="chinese-firstname show-on-scroll">雪</div>
             </div>
-            <div class = "my-intro">
+            <div class = "my-intro show-on-scroll">
                 <h1>Hi, I'm Silvia, <br> a web developer.</h1>
                 <p>I'm a budding front end developer / designer based in London.<br>I love creating beautiful websites and I'm learning cool techniques every day!</p>
                 <div class="social">
@@ -107,7 +107,7 @@
                         <img src="Resources/Media files/Images/colmar-academy-mobile-2.png" alt ="a screenshot of the Colmar Academy website's mobile version">
                     </div>
                     <div class="project-intro">
-                        <h2>Colmar Academy</h2>
+                        <h3>Colmar Academy</h3>
                         <p>This is a front-end development excercise project that I completed based on a design template on Codecademy. The completed website is fully responsive on devices of various sizes. </p>
                     </div>
                     <div class="technology">
@@ -134,7 +134,7 @@
                         <img src="./Resources/Media files/Images/Blog-mobile2.png" alt ="a screenshot of a blog template website's mobile version">
                     </div>
                     <div class="project-intro">
-                        <h2>Blog</h2>
+                        <h3>Blog</h3>
                         <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>
                     </div>
                     <div class="technology">
@@ -160,7 +160,7 @@
                         <img src="Resources/Media files/Images/BR-mobile2.png" alt ="a screenshot of BR Architects website's mobile version">
                     </div>
                     <div class="project-intro">
-                        <h2>BR Architects</h2>
+                        <h3>BR Architects</h3>
                         <p>This is a front-end development excercise project that I completed based on a design template on W3School. The completed website is fully responsive on devices of various sizes. </p>                      
                     </div>
                     <div class="technology">
@@ -181,27 +181,34 @@
 
         <section id="about">
             <h2>About</h2>
-            <div class="image-container">
-                <img src="./Resources/Media files/Images/Silvia-photo.jpg" alt="a close-up photo of web developer Silvia Lee">
+            <div class="image-container show-on-scroll">
+                <img class= "show-on-scroll" src="./Resources/Media files/Images/Silvia-photo.jpg" alt="a close-up photo of web developer Silvia Lee">
             </div>
-            <p>I'm a budding front-end developer based in London, UK. I used to be a marketer but in the crazy year of 2020, I decided to make a brave career change and become a web developer. <br><br>I'm already very familiar with HTML5 and CSS3, and am making improvements every day on my JavaScript and design skills. </p>
-                <ul class="skills">
+            <p class= "show-on-scroll self-intro">I'm a budding front-end developer based in London, UK. I used to be a marketer but in the crazy year of 2020, I decided to make a brave career change and become a web developer. <br><br>I'm already very familiar with HTML5 and CSS3, and am making improvements every day on my JavaScript and design skills. </p>
+                <ul class="skills show-on-scroll">
                     <li>
                         <div class="tech">HTML</div>
-                            <div class="bar">
-                                <div class="html-bar">90%</div>
+                            <div class="bar show-on-scroll">
+                                <div class="html-bar show-on-scroll">90%</div>
+                                90%
                             </div>
                         </div> 
                         
                     </li>
                     <li>
                         <div class="tech">CSS</div>
-                        <div class="bar">90%</div>
+                        <div class="bar show-on-scroll">
+                            <div class="css-bar show-on-scroll">80%</div> 
+                            80%
+                        </div>
                         
                     </li>
                     <li>
                         <div class="tech">JavaScript</div>
-                        <div class="bar">50%</div>
+                        <div class="bar show-on-scroll">
+                            <div class="js-bar show-on-scroll">50%</div> 
+                            50%
+                        </div>
                         
 
                     </li>

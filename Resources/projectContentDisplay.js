@@ -1,8 +1,10 @@
 let projects = document.getElementsByClassName("project-container");
+let about = document.getElementById("about");
 
 function showContent() {
   document.getElementById('slide-show').style.display = "none";
   document.getElementById('container').style.display = "block";
+  about.style.display = "none";
 }
 
 function showContentColmar() {
@@ -23,6 +25,7 @@ function showContentBR() {
 function closeContent() {
   document.getElementById('slide-show').style = "";
   document.getElementById('container').style = "";
+  about.style = "";
   for (let i = 0; i < projects.length; i++) {
     projects[i].style = "";
     dummyLeft[i].style = "";
