@@ -73,6 +73,6 @@ function showProjects2(num) {
   if (num >= projects.length) {projectIndex = 0;}
   if (num <= -1) {projectIndex = projects.length - 1}
   projects[projectIndex].style.display = "grid";
-  projects[projectIndex].style.animation = "fromRight ease 0.5s";  
+  projects[projectIndex].style.animation = "fromRight 1s ease";  
   dummyLeft[projectIndex].style.display = "block";
 }

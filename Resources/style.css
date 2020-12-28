@@ -578,7 +578,7 @@ max-width: 47%;
         transform: translateX(50%);
     }
     to {
-        transform: translateX(150%);
+        transform: translateX(100%);
         opacity: 0;
     }
 }
@@ -588,7 +588,7 @@ max-width: 47%;
         transform: translateX(50%);
     }
     to {
-        transform: translateX(150%);
+        transform: translateX(100%);
         opacity: 0;
     }
 }
@@ -608,7 +608,7 @@ max-width: 47%;
     top: 115px;
     z-index: -1;
     animation: rightOut 1s ease both;
-    -webkit-animation: leftOut 1s ease both;
+    -webkit-animation: rightOut 1s ease both;
     display: none;
 }
 
@@ -1020,10 +1020,7 @@ footer {
     padding-top: 60px;
     padding-bottom: 40px;
     }
-    .dummy-left,
-    .dummy-right {
-        display: none;
-    }
+    
     .dot {
         height: 8px;
         width: 8px;
