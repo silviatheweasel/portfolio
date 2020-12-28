@@ -989,7 +989,7 @@ footer {
     }
     .my-name {
         grid-area: 1 / 1 / span 2 / span 8;
-        margin-top: 3rem;
+        margin-top: 3.5rem;
         margin-left: 1rem;
     }
     .chinese-name {
@@ -1024,7 +1024,6 @@ footer {
     .dummy-right {
         display: none;
     }
-
     .dot {
         height: 8px;
         width: 8px;
@@ -1069,7 +1068,7 @@ footer {
         flex-direction: column;
         min-height: 900px;
         justify-content: space-around;
-        padding: 3rem 5px 0 5px;
+        padding: 3rem 10px 0 10px;
     }
     .about-header {
         margin-top: 0;
