@@ -1155,7 +1155,7 @@ footer {
         overflow: hidden;
         height: 0;
     }
-    nav .desktop.open {
+    nav .desktop.closed {
         height: auto;
     }
     nav .desktop li {
