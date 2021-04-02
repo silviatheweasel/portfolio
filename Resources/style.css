@@ -1166,11 +1166,6 @@ footer {
     #home {
         height: 700px;
     }
-
-    .rectangle {
-        width: 1rem;
-    }
-
     .my-name {
         grid-area: 1 / 1 / span 2 / span 8;
         margin-top: 3.5rem;
