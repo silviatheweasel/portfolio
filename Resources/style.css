@@ -425,6 +425,10 @@ color: #F24957;
     -webkit-animation: fadeIn 1.5s ease 0.75s both;
 }
 
+.close-windows i {
+    padding: 20px;
+}
+
 #close {
     float: right;
     margin-right: 1.5rem;
@@ -491,6 +495,7 @@ color: #F24957;
     font-size: 2rem;
     cursor: pointer;
     outline: none;
+    top: 50vh;  
 }
 
 .previous-btn:hover,
@@ -506,12 +511,15 @@ color: #F24957;
 
 .previous-btn {
     left: 4rem;
-    top: 50vh;
 }
 
 .next-btn {
     right: 4rem;
-    top: 50vh;
+}
+
+#previous-btn,
+#next-btn {
+    padding: 20px;
 }
 
 @keyframes from-right {
