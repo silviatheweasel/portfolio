@@ -95,17 +95,17 @@ nav .desktop li a {
 }
 
 .letter-i {
-    /* width: 1rem; */
+    width: 0.5rem;
     position: relative;
+    margin-right: 0.5rem;
 }
 
-.circle {
-    width: 0.7rem;
-    height: 0.7rem;
-    background-color: #F24957;
-    border-radius: 50%;
+#circle {
+    font-size: 0.7rem;
+    color: #F24957;
     position: absolute;
-    top: 2rem;
+    top: 1.6rem;
+    width: 0.7rem; 
     animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
 }
@@ -153,11 +153,11 @@ nav .desktop li a {
 }
 
 .rectangle {
-    height: 3.5rem;
+    height: 3.1rem;
     width: 0.5rem;
     background-color: #F4D2BD; 
     position: absolute;
-    top: 3.1rem;
+    top: 2.8rem;
 }
 
 .lvia {
