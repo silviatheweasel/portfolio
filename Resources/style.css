@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    max-width: 1440px;
+    max-width: 1700px;
     overflow-x: hidden;
     margin: 0 auto;
 }
@@ -154,7 +154,7 @@ nav .desktop li a {
 
 .rectangle {
     height: 3.5rem;
-    width: 0.45rem;
+    width: 0.5rem;
     background-color: #F4D2BD; 
     position: absolute;
     top: 3.1rem;
