@@ -710,7 +710,25 @@ color: #F24957;
     position: relative;
 }
 
-.react-project a:hover::after {
+#try-btn {
+    background-color: #F24957;
+    padding: 8px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#try-btn:hover {
+    background-color: white;
+}
+
+#try-btn a {
+    color:#010326;
+    text-decoration: none;
+}
+
+.react-project .git-link:hover::after {
     content: "See code depository";
     position: absolute;
     background-color: #F4D2BD;

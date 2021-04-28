@@ -7,17 +7,16 @@
     <meta name="keywords" content="web development, front-end development, web design, example websites">
     <meta name="author" content="Silvia Lee">
     <title>Silvia Lee's Portfolio</title>
-    <link href="./Resources/style.css" rel="stylesheet">
+    <link href="Resources/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <script src="./Resources/slideShow.js" defer></script>
-    <script src="./Resources/projectContentDisplay.js" defer></script>
-    <script src="./Resources/animationControl.js" defer></script>
-    <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
+    <script src="Resources/JavaScript/slideShow.js" defer></script>
+    <script src="Resources/JavaScript/animationControl.js" defer></script>
+    <script src="Resources/JavaScript/Menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" defer></script>
-    <script src="Resources/Menu.js" defer></script>
+    <script src="Resources/JavaScript/projectContentDisplay.js" defer></script>
+    <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <header id="home">
@@ -189,7 +188,7 @@
             <h2 class="react-projects-header show-on-scroll">Web App Projects</h2>
             <div class="react-projects-container">
 
-                <div class="react-project" id="react-project-1">
+                <!-- <div class="react-project" id="react-project-1">
                     <img class="react-project-img" id="react-project-img-1" src="Resources/Media files/Images/text-processor.jpg">
                     <div class="show-on-hover" id="show-on-hover-1">
                         <h3>React text editor</h3> 
@@ -198,7 +197,20 @@
                         <a href="https://github.com/silviatheweasel/text-processor" target="blank"><i class="fab fa-github"></i></a>
                         <button class="watchBtn" id="watchBtn-1"><i class="fas fa-play-circle"></i></button>
                     </div>
+                </div> -->
+
+               <div class="react-project" id="react-project-1">
+                <img class="react-project-img" id="react-project-img-1" src="Resources/Media files/Images/weather-app.jpg">
+                <div class="show-on-hover" id="show-on-hover-1">
+                    <h3>React weather app</h3> 
+                    <p class="react-project-intro">Get current, hourly, and daily weather forecast of your current location and any place you search for.
+                    </p>
+                    <button id="try-btn">
+                        <a href="https://silvia-weather-app.herokuapp.com/" target="blank">Try it live</a>
+                    </button>
+                    <button class="watchBtn" id="watchBtn-1"><i class="fas fa-play-circle"></i></button>
                 </div>
+            </div>
 
                 <div class="demo-video" id="demo-video-1">
                     <button class="close-btn close-windows">
@@ -207,7 +219,11 @@
                     <video controls autoplay muted loop>
                         <source src="./Resources/Media files/Videos/Text editor demo.mp4">
                         Your browser does not support the video tag.
-                    </video>                     
+                    </video>  
+                    <div class="project-info">
+                        <p>This is a responsive web app built with </p>
+
+                    </div>                   
                 </div>
 
                 <div class="react-project" id="react-project-2">
@@ -216,7 +232,7 @@
                         <h3>React kanban </h3>
                         <p class="react-project-intro">You can create and remove lists and items and drag and drop items, just like with Trello! <br><br>
                             This project was entirely created by me and no additional libraries was used. </p> 
-                        <a href="https://github.com/silviatheweasel/kanban-react" target="blank"><i class="fab fa-github"></i></a>     
+                        <a href="https://github.com/silviatheweasel/kanban-react" target="blank" class="git-link"><i class="fab fa-github"></i></a>     
                         <button class="watchBtn" id="watchBtn-2"><i class="fas fa-play-circle"></i></button>
                     </div>
                 </div> 
@@ -236,7 +252,7 @@
                     <div class="show-on-hover" id="show-on-hover-3">
                         <h3>React payment calculator</h3> 
                         <p class="react-project-intro">You can keep track and calculator your earnings.</p>
-                        <a href="https://github.com/silviatheweasel/Monthly-Pay-Calculator" target="blank"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/silviatheweasel/Monthly-Pay-Calculator" target="blank" class="git-link"><i class="fab fa-github"></i></a>
                         <button class="watchBtn" id="watchBtn-3"><i class="fas fa-play-circle"></i></button> 
                     </div>
                 </div>
