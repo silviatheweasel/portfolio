@@ -1,12 +1,16 @@
-const projects = document.getElementsByClassName("project-container");
+// const projects = document.getElementsByClassName("project-container");
 const about = document.getElementById("about");
+const loadMore = document.getElementById("load-more-btn");
+const galaryRow = document.getElementsByClassName("galary-row");
+const projectContainer = document.getElementById("react-projects-container");
 let projectIndex = 0;
 const dummyLeft = document.getElementsByClassName('dummy-left');
 const dummyRight = document.getElementsByClassName('dummy-right');
 const reactProjects = document.getElementsByClassName("react-project");
-const closeVideoBtns = document.getElementsByClassName("close-btn");
+const closeReactDetailsBtns = document.getElementsByClassName("close-btn");
 const display = (element, displayStyle) => element.style.display = displayStyle;
 const styleReset = element => element.style = "";
+
 
 
 const showContent = () => {
@@ -73,31 +77,46 @@ const showProjects = (num, direction) => {
   direction === "left" ? display(dummyRight[projectIndex], "block") : display(dummyLeft[projectIndex], "block");
 }
 
-//display project descriptions on hover and demo videos when clicked 
+//display project descriptions on hover and project details when clicked 
 for (let i = 0; i < reactProjects.length; i++) {
   const hoverContent = document.getElementById(`show-on-hover-${i+1}`);
-  const demoVideo = document.getElementById(`demo-video-${i+1}`);
-  const watchBtn = document.getElementById(`watchBtn-${i+1}`);
+  const reactProjectDetails = document.getElementById(`react-project-details-${i+1}`);
+  const learnMoreBtn = document.getElementById(`learn-more-btn-${i+1}`);
 
   reactProjects[i].addEventListener("mouseover", () => display(hoverContent, "block"));
   reactProjects[i].addEventListener("mouseout", () => display(hoverContent, "none")); 
 
-  const displayVideo = () => {
-    display(demoVideo, "flex");
+  const displayProjectDetails = () => {
+    display(reactProjectDetails, "grid");
     for (let j = 0; j < reactProjects.length; j++) {
       display(reactProjects[j], "none");
     }
   }
-  watchBtn.addEventListener("click", () => displayVideo());
+  learnMoreBtn.addEventListener("click", () => displayProjectDetails());
 
-  const closeVideo = () => {
-    display(demoVideo, "none");
+  const closeProjectDetails = () => {
+    display(reactProjectDetails, "none");
     for (let j = 0; j < reactProjects.length; j++) {
       display(reactProjects[j], "block");
     }
   }
 
-  for (let i = 0; i < projects.length; i++) {
-    closeVideoBtns[i].addEventListener("click", closeVideo);
+  for (let i = 0; i < reactProjects.length; i++) {
+    closeReactDetailsBtns[i].addEventListener("click", closeProjectDetails);
   }
 };
+
+loadMore.addEventListener("click", () => {
+  display(loadMore, "none");
+
+  for (let i = 0; i < galaryRow.length; i++ ) {
+    display(galaryRow[i], "grid");
+    galaryRow[i].style.gridTemplate = "repeat(1, 1fr) / repeat(3, 1fr)";
+  }
+
+  for (let i = 0; i < reactProjects.length; i++) {
+    reactProjects[i].style.gridArea = `1 / ${i % 3 + 1} / span 1 / span 1`;
+    reactProjects[i].style.width = "98%";
+    reactProjects[i].style.transition = "none";
+  }
+});
