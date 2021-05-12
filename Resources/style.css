@@ -723,12 +723,12 @@ color: #F24957;
 .react-project a {
     position: relative;
 }
-
-.try-btn, 
+ 
 .learn-more-btn,
 #load-more-btn {
     background-color: #F24957;
     padding: 10px 20px;
+    display: inline-block;
     width: 120px;
     border-radius: 36px;
     outline: none;
@@ -741,12 +741,14 @@ color: #F24957;
     margin: 5rem auto;
     width: 200px;
     display: block;
+    background-color: #010326;
+    color: #F24957;
     
 }
 
 #load-more-btn:hover {
-    background-color: #010326;
-    color: #F24957;
+    background-color: #F24957;
+    color: #010326;
 }
 
 .try-btn:hover,
@@ -760,9 +762,22 @@ color: #F24957;
     background-color: #F24957;
 }
 
+.try-btn {
+    background-color: #F24957;
+    border-radius: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
 .try-btn a {
     color:#010326;
+    padding: 10px 20px;
     text-decoration: none;
+    width: 120px;
+    border-radius: 36px;
+    display: block;
 }
 
 .react-project-details {
@@ -803,9 +818,7 @@ color: #F24957;
 
 .detail-page-btn {
     display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin: 0.5rem 1rem 0 0;
+    margin: 0 1rem 0 0;
     background-color: white;
 }
 

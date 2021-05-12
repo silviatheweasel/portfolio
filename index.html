@@ -16,6 +16,7 @@
     <script src="Resources/JavaScript/Menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" defer></script>
     <script src="Resources/JavaScript/projectContentDisplay.js" defer></script>
+    <script src="Resources/JavaScript/ping.js" defer></script>
     <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
@@ -24,8 +25,8 @@
             <div class="burger-nav" id="burger-nav"><i class="fas fa-bars"></i></div>
             <ul class="desktop" id="desktop-menu">
                 <li class="menu-item"><a href="#home">HOME</a></li>
-                <li class="menu-item"><a href="#projects">WEBSITE PROJECTS</a></li>
-                <li class="menu-item"><a href="#react-projects">WEB APP PROJECTS</a></li>
+                <li class="menu-item"><a href="#projects">WEBSITES</a></li>
+                <li class="menu-item"><a href="#react-projects">WEB APPS</a></li>
                 <li class="menu-item"><a href="#about">ABOUT</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
             </ul>
@@ -63,7 +64,7 @@
     <main>
 
         <section id="react-projects">
-            <h2 class="react-projects-header show-on-scroll">Web App Projects</h2>
+            <h2 class="react-projects-header show-on-scroll">Web Apps</h2>
 
             <div id="react-projects-container">
 
@@ -129,6 +130,7 @@
                                 <button class="try-btn detail-page-btn">
                                     <a href="https://silvia-weather-app.herokuapp.com/" target="blank">Try it live</a>
                                 </button>
+                                <a href="https://github.com/silviatheweasel/weather-app" target="blank" class="git-link"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
 
@@ -173,7 +175,7 @@
                             <h4>Features</h4>
                             <ul class="react-feature-list">
                                 <li>Supports list creation and deletion</li>
-                                <li>Supports card creation, re-naming, and deletion</li>
+                                <li>Supports card creation, rename, and deletion</li>
                                 <li>Supports card drag and drop</li>
                             </ul>
 
@@ -214,7 +216,7 @@
                         <img class="react-project-img" id="react-project-img-3" src="Resources/Media files/Images/pay-calculator.jpg">
                         <div class="show-on-hover" id="show-on-hover-3">
                             <h3>React payment calculator</h3> 
-                            <p class="react-project-intro">Keep track of work hours and calculator your earnings.</p>
+                            <p class="react-project-intro">Keep track of work hours and calculate your earnings.</p>
                             <button class="try-btn">
                                 <a href="https://silvia-pay-calculator.herokuapp.com/" target="blank">Try it live</a>
                             </button>  
@@ -271,12 +273,12 @@
 
                 <div class="galary-row" id="galary-row-2">
                     <div class="react-project" id="react-project-4">
-                        <img class="react-project-img" id="react-project-img-4" src="Resources/Media files/Images/weather-app.jpg">
+                        <img class="react-project-img" id="react-project-img-4" src="Resources/Media files/Images/text-processor.jpg">
                         <div class="show-on-hover" id="show-on-hover-4">
-                            <h3>React payment calculator</h3> 
-                            <p class="react-project-intro">Keep track of work hours and calculator your earnings.</p>
+                            <h3>React text processor</h3> 
+                            <p class="react-project-intro">Process your text in a simple, elegant app.</p>
                             <button class="try-btn">
-                                <a href="https://silvia-pay-calculator.herokuapp.com/" target="blank">Try it live</a>
+                                <a href="https://silvia-text-processor.herokuapp.com/" target="blank">Try it live</a>
                             </button>  
                             <button class="learn-more-btn" id="learn-more-btn-4">Learn more</button> 
                         </div>
@@ -289,7 +291,7 @@
 
                         <div class="react-project-video">
                             <video autoplay muted loop >
-                                <source src="Resources/Media files/Videos/pay-calculator-demo.mp4">
+                                <source src="Resources/Media files/Videos/text-processor-demo.mp4">
                                 Your browser does not support the video tag.
                             </video>  
                         </div>
@@ -299,9 +301,10 @@
                             <p>A responsive web app made with React class components, styled with Sass, and deployed on Heroku.</p>
                             <h4>Features</h4>
                             <ul class="react-feature-list">
-                                <li>Supports input of work hours, work minutes, and hourly rate</li>
-                                <li>Supports adding and deleting rows</li>
-                                <li>Calculates tatal work hours and pay</li>
+                                <li>A tutorial on first load</li>
+                                <li>3 text processing methods</li>
+                                <li>Allows copying to clipboard</li>
+                                <li>Customised alert box</li>
                             </ul>
                             <div>
                                 <h4>Libraries</h4>
@@ -311,9 +314,9 @@
                             </div>
                             <div class="app-links">
                                 <button class="try-btn detail-page-btn">
-                                    <a href="https://silvia-pay-calculator.herokuapp.com/" target="blank">Try it live</a>
+                                    <a href="https://silvia-text-processor.herokuapp.com/" target="blank">Try it live</a>
                                 </button>   
-                                <a href="https://github.com/silviatheweasel/Monthly-Pay-Calculator" target="blank" class="git-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/silviatheweasel/text-processor" target="blank" class="git-link"><i class="fab fa-github"></i></a>
                             </div>            
                         </div>
 
@@ -339,7 +342,7 @@
         </section>
 
         <section id="projects">
-            <h2 class="projects-header show-on-scroll">Website Projects</h2>
+            <h2 class="projects-header show-on-scroll">Websites</h2>
             <div id="slide-show">
                 <div class="slideshow-container">
                     <!-- Full-width images with number and caption text -->
