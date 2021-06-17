@@ -45,4 +45,6 @@ window.onload = (event) => {
     ping("https://silvia-pay-calculator.herokuapp.com/", 0.3);
     ping("https://silvia-react-kanban.herokuapp.com/", 0.3);
     ping("https://silvia-text-processor.herokuapp.com/", 0.3);
+    ping("https://silvia-to-do-list.herokuapp.com/", 0.3);
+    ping("https://retro-secrets.herokuapp.com/", 0.3);
 }
