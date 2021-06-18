@@ -1608,6 +1608,65 @@ footer {
         padding: 10px 0;
         font-size: 30px;
     }
+    .slide-text-container {
+        width: 100%;
+        position: static;
+        padding: 0 50px;
+    }
+    #featured-slides-wrapper {
+        padding: 50px 0 0 0;
+    }
+    .featured-project-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .featured-slide {
+        height: 550px;
+    }
+    #featured-project {
+        padding: 60px 0;
+    }
+    #visit-site-btn {
+        margin-top: 40px;
+    }
+    .slide-right-container {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        background: rgb(255, 255, 255);
+    }
+    .desktop-screenshot {
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: 40%;
+        object-fit: contain;
+        position: absolute;
+    }
+    .slide-left-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        width: 70%;
+        z-index: 5;
+    }
+    .logo {
+        height: 30px;
+    }
+    #featured-right-btn i {
+        padding: 0 10px;
+    }
+    .slide-demo {
+        width: 100%;
+    }
+    #featured-slide-2 ul li {
+        padding: 10px 0;
+    }
+    #featured-slide-2 ul li p {
+        line-height: 1.2rem;
+    }
+    #featured-slide-2 ul li h4 {
+        font-size: 1.2rem;
+    }
     .my-name {
         grid-area: 1 / 1 / span 2 / span 8;
         margin-top: 3.5rem;
@@ -1723,5 +1782,8 @@ footer {
 @media only screen and (max-width: 380px) {
     #about {
         padding: 0;
+    }
+    .featured-slide {
+        height: 600px;
     }
 }
