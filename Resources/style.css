@@ -1175,7 +1175,7 @@ h3 {
 }
 
 .skills {
-    grid-area: 3 / 7 / span 5 / span 5;
+    grid-area: 3 / 7 / span 5 / span 6;
     transform: translateX(100%);
     opacity: 0;
     transition: all 1s ease;
