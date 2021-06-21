@@ -16,6 +16,7 @@
     <script src="Resources/JavaScript/Menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" defer></script>
     <script src="Resources/JavaScript/projectContentDisplay.js" defer></script>
+    <script src="Resources/JavaScript/ping.js" defer></script>
     <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
@@ -23,9 +24,18 @@
         <nav>
             <div class="burger-nav" id="burger-nav"><i class="fas fa-bars"></i></div>
             <ul class="desktop" id="desktop-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#featured-slides-wrapper">FEATURED PROJECT</a></li>
+                <li><a href="#react-projects-container">REACT WEB APPS</a></li>
+                <li><a href="#slide-show">STATIC WEBSITES</a></li>
+                <li><a href="#about-image-container">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <ul class="mobile" id="mobile-menu">
                 <li class="menu-item"><a href="#home">HOME</a></li>
-                <li class="menu-item"><a href="#projects">WEBSITE PROJECTS</a></li>
-                <li class="menu-item"><a href="#react-projects">WEB APP PROJECTS</a></li>
+                <li class="menu-item"><a href="#featured-project">FEATURED PROJECT</a></li>
+                <li class="menu-item"><a href="#react-projects">REACT WEB APPS</a></li>
+                <li class="menu-item"><a href="#projects">STATIC WEBSITES</a></li>
                 <li class="menu-item"><a href="#about">ABOUT</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
             </ul>
@@ -49,32 +59,558 @@
             </div>
             <div class = "my-intro show-on-scroll">
                 <h1>Hi, I'm Silvia, <br> a web developer.</h1>
-                <p>I'm a budding front end developer / designer based in London.<br><br>I love creating beautiful websites and web apps with JavaScript (vanilla and React), HTML, CSS, and TypeScript.</p>
-                <div class="social">
-                    <a href="https://github.com/silviatheweasel" target="blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/silvialeedavies/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.facebook.com/silvialeeart" target="blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/silvia_lee_art/" target="blank"><i class="fab fa-instagram"></i></a>
+                <p>I'm a front end developer / designer based in London.<br><br>I love creating beautiful and responsive websites with JavaScript (vanilla and React), HTML, CSS (Sass), and TypeScript.</p>
+                <div class="tech-stack">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <img src="Resources/Media files/Images/typescript-logo.jpg" alt="typescript logo" id="typescript-logo">
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-sass"></i>
+                    <i class="fab fa-git"></i>
+
                 </div>
             </div>
         </div>
     </header>
 
     <main>
+        <section id="featured-project">
+            <h2 class="react-projects-header show-on-scroll" id="featured-header">Featured Project</h2>
+            <div id="featured-slides-wrapper">
+                <div class="featured-slide">
+                    <img 
+                        class="featured-project-img show-on-scroll" 
+                        src="Resources/Media files/Images/featured-project.jpg" 
+                        alt="retro secrets project shown on screens of different sizes"
+                        >
+                        <div class="slide-text-container show-on-scroll">
+                            <h3 class="slide-title show-on-scroll">Retro Secrets Online Jewellery Shop</h3>
+                            <p class="slide-para show-on-scroll">A responsive front-end web app of an online jewellery shop made with React, styled with Sass, and deployed on Heroku.</p>
+                            <button id="visit-site-btn"><a href="https://retro-secrets.herokuapp.com/" id="link" target="blank">Visit Site</a></button>    
+                        </div>  
+                
+                </div>
+                <div class="featured-slide" id="featured-slide-2">
+                    <img class="screenshot mobile-screenshot" src="Resources/Media files/Images/retro-secrets-mobile.jpg" alt="retro secrets mobile screenshot">
+                    <div class="slide-right-container">
+                        <ul>
+                            <li>
+                                <h4>Responsive</h4>
+                                <p>This web app is responsive across devices of all sizes and supports major browsers including Google Chrome, Firefox, Safari 13+, Opera, and Edge.</p>
+                            </li>
+                            <li>
+                                <h4>Scalable</h4>
+                                <p>This project is coded in small and re-usable React function components and styled with Sass, making it easy to scale.</p>
+                            </li>
+                            <li class="hide-on-mobile">
+                                <h4>Fast loading</h4>
+                                <p>As a single-page React app that pulls data from a mock API service, this web app is fast to load.</p>
+                            </li>
+                            <li class="hide-on-mobile">
+                                <h4>With UX in mind</h4>
+                                <p>This web app makes it easy for users to view products, adjust and delete items in the cart, and change shipping options no matter what device they are using.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="featured-slide" id="featured-slide-3">
+                    <video autoplay muted loop controls class="slide-demo">
+                        <source src="Resources/Media files/Videos/retro-secrets-demo.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li class="show-on-mobile">
+                            <h4>Fast loading</h4>
+                            <p>As a single-page React app that pulls data from a mock API service, this web app is fast to load.</p>
+                        </li>
+                        <li class="show-on-mobile">
+                            <h4>With UX in mind</h4>
+                            <p>This web app makes it easy for users to view products, adjust and delete items in the cart, and change shipping options no matter what device they are using.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="featured-slide" id="featured-slide-4">
+                    <div class="slide-left-container">                
+                        <div>
+                            <h4>Development</h4>
+                            <img class="logo" src="https://www.pinclipart.com/picdir/big/91-918525_react-logos-download-green-tree-logo-tree-logo.png" alt="react logo">
+                        </div>
+                        <div>
+                            <h4>Styling</h4>
+                            <img class="logo" src="Resources/Media files/Images/sass-logo.png" alt="Sass logo">
+                        </div>
+                        <div>
+                            <h4>Version Control</h4>
+                            <img class="logo" src="Resources/Media files/Images/git-logo.png" alt="git logo">
+                        </div>
+                        <div>
+                            <h4>Testing</h4>
+                            <img class="logo" src="Resources/Media files/Images/jest-logo.png" alt="jest logo">
+                        </div>
+                        <div>
+                            <h4>Deployment</h4>
+                            <img class="logo" src="Resources/Media files/Images/heroku-logo.png" alt="heroku logo"> 
+                        </div>
+                        <div>
+                            <h4>Languages</h4>
+                            <p>JavaScript</p>
+                            <p>JSX</p>
+                            <p>Sass</p>
+                        </div>
+                        <div>
+                            <h4>Tools</h4>
+                            <p>mockAPI.io</p>
+                        </div>
+                    </div>
+                    <img class="screenshot desktop-screenshot" src="Resources/Media files/Images/retro-secret-desktop-screenshot.jpg" alt="Retro Secrets desktop screenshot">
+                </div>
+            </div>
+            <div class="dots" style="text-align:center">
+                <span class="dot featured-dot" onclick="showCurrentSlide(0)"></span>
+                <span class="dot featured-dot" onclick="showCurrentSlide(1)"></span>
+                <span class="dot featured-dot" onclick="showCurrentSlide(2)"></span>
+                <span class="dot featured-dot" onclick="showCurrentSlide(3)"></span>
+            </div>
+           <button 
+            class="featured-btns"
+            id="featured-right-btn" 
+            onclick="controlSlides()"><i class="fas fa-chevron-right"></i></button>
+
+        </section>
+
+        <section id="react-projects" class="scroll-snap-point">
+            <h2 class="react-projects-header show-on-scroll">React Web Apps</h2>
+
+            <div id="react-projects-container">
+
+                <!-- <div class="galary-row" id="galary-row-1"> -->
+
+                    <div class="react-project" id="react-project-1">
+                        <img class="react-project-img" id="react-project-img-1" src="Resources/Media files/Images/weather-app.jpg">
+                        <div class="show-on-hover" id="show-on-hover-1">
+                            <h3>Weather app</h3> 
+                            <p class="react-project-intro">Get current, hourly, and daily weather forecasts of your current location and any place you search for.
+                            </p>
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://silvia-weather-app.herokuapp.com/" target="blank">Try it live</a>
+                                </button>
+                                <button class="learn-more-btn" id="learn-more-btn-1">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="react-project-details" id="react-project-details-1">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop>
+                                <source src="Resources/Media files/Videos/weather-app-demo.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>React weather app</h3>
+                            <p>A live responsive web app made with React function components and hooks, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+
+                            <ul class="react-feature-list">
+                                <li>Automatically loads weather forecasts of the user's current location</li>
+                                <li>Automatically completes the user's location search</li>
+                                <li>Supports city name, address, or postcode as search terms</li>
+                                <li>Displays current weather, 24-hour hourly forecasts, and 8-day daily forecasts</li>
+                                <li>Customised background images that indicate different weather conditions and time of the day</li>
+                            </ul>
+
+                            <div>
+                                <h4>APIs</h4>
+                                <ul class="react-tech-list">
+                                    <li>Google Geocoding API</li>
+                                    <li>Google Places API</li>
+                                    <li>Open Weather App API</li>
+                                    <li>Geolocation API</li>
+                                </ul>
+                            </div>  
+
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                    <li>React Google Places Autocomplete</li>
+                                </ul>
+                            </div>   
+                            
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://silvia-weather-app.herokuapp.com/" target="blank">Try it live</a>
+                                </button>
+                                <a href="https://github.com/silviatheweasel/weather-app" target="blank" class="git-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="react-project" id="react-project-2">
+                        <img class="react-project-img" id="react-project-img-2" src="Resources/Media files/Images/retro-secrets.jpg">
+                        <div class="show-on-hover" id="show-on-hover-2">
+                            <h3>e-Commerce jewellery shop</h3>
+                            <p class="react-project-intro">Browse products and add your favourites to the cart to check out.</p> 
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://retro-secrets.herokuapp.com/" target="blank">Try it live</a>
+                                </button>    
+                                <button class="learn-more-btn" id="learn-more-btn-2">Learn more</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="react-project-details" id="react-project-details-2">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop >
+                                <source src="Resources/Media files/Videos/retro-secrets-demo.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>e-Commerce Jewellery Shop</h3>
+                            <p>A responsive front-end web app of an online jewellery shop made with React function components and hooks, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+                            <ul class="react-feature-list">
+                                <li>Supports browsing by categories</li>
+                                <li>Each product has a quick view product page and a detailed product page</li>
+                                <li>Has a slide-out cart and a check-out cart</li>
+                                <li>Automatically calculates and updates shipping fees</li>
+                                <li>Supports adjusting and deleting products in the cart</li>
+                                <li>Provides auto-complete suggestions for shipping destination countries</li>
+                            </ul>
+
+                            <div>
+                                <h4>APIs</h4>
+                                <ul class="react-tech-list">
+                                    <li>mockAPI.io</li>
+                                </ul>
+                            </div>  
+
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                </ul>
+                            </div>  
+
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://retro-secrets.herokuapp.com/" target="blank">Try it live</a>
+                                </button>
+                                <a href="https://github.com/silviatheweasel/retro-secret-site" target="blank" class="git-link"><i class="fab fa-github"></i></a>  
+                            </div>   
+
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>              
+                    </div>
+                    
+                    <div class="react-project" id="react-project-3">
+                        <img class="react-project-img" id="react-project-img-3" src="Resources/Media files/Images/pay-calculator.jpg">
+                        <div class="show-on-hover" id="show-on-hover-3">
+                            <h3>Feelancer pay calculator</h3> 
+                            <p class="react-project-intro">Keep track of work hours and calculate your earnings.</p>
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://silvia-pay-calculator.herokuapp.com/" target="blank">Try it live</a>
+                                </button>  
+                                <button class="learn-more-btn" id="learn-more-btn-3">Learn more</button> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="react-project-details" id="react-project-details-3">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop >
+                                <source src="Resources/Media files/Videos/pay-calculator-demo.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>Feelancer pay calculator</h3>
+                            <p>A responsive web app made with React class components, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+                            <ul class="react-feature-list">
+                                <li>Supports input of work hours, work minutes, and hourly rate</li>
+                                <li>Supports adding and deleting rows</li>
+                                <li>Calculates tatal work hours and pay</li>
+                            </ul>
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://silvia-pay-calculator.herokuapp.com/" target="blank">Try it live</a>
+                                </button>   
+                                <a href="https://github.com/silviatheweasel/Monthly-Pay-Calculator" target="blank" class="git-link"><i class="fab fa-github"></i></a>
+                            </div>            
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+
+                <!-- </div> -->
+
+                <!-- <div class="galary-row" id="galary-row-2"> -->
+                    <div class="react-project" id="react-project-4">
+                        <img class="react-project-img" id="react-project-img-4" src="Resources/Media files/Images/text-processor.jpg">
+                        <div class="show-on-hover" id="show-on-hover-4">
+                            <h3>Text processor</h3> 
+                            <p class="react-project-intro">Capitalise the first letter of each word. Make every letter lowercase or uppercase. All in a simple, elegant app.</p>
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://silvia-text-processor.herokuapp.com/" target="blank">Try it live</a>
+                                </button>  
+                                <button class="learn-more-btn" id="learn-more-btn-4">Learn more</button> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="react-project-details" id="react-project-details-4">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop >
+                                <source src="Resources/Media files/Videos/text-processor-demo.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>Text processor</h3>
+                            <p>A responsive web app made with React class components, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+                            <ul class="react-feature-list">
+                                <li>A tutorial on first load</li>
+                                <li>3 text processing methods</li>
+                                <li>Allows copying to clipboard</li>
+                                <li>Customised alert box</li>
+                            </ul>
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://silvia-text-processor.herokuapp.com/" target="blank">Try it live</a>
+                                </button>   
+                                <a href="https://github.com/silviatheweasel/text-processor" target="blank" class="git-link"><i class="fab fa-github"></i></a>
+                            </div>            
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="react-project" id="react-project-5">
+                        <img class="react-project-img" id="react-project-img-5" src="Resources/Media files/Images/to-do-list.jpg">
+                        <div class="show-on-hover" id="show-on-hover-5">
+                            <h3>To-do list</h3> 
+                            <p class="react-project-intro">Write down your tasks and enjoy the satisfaction of ticking them off. Track your tasks with a simple and cool app.</p>
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://silvia-to-do-list.herokuapp.com/" target="blank">Try it live</a>
+                                </button>  
+                                <button class="learn-more-btn" id="learn-more-btn-5">Learn more</button> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="react-project-details" id="react-project-details-5">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop >
+                                <source src="Resources/Media files/Videos/to-do-list.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>To-Do List</h3>
+                            <p>A responsive web app made with React class components, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+                            <ul class="react-feature-list">
+                                <li>Customised checkboxes</li>
+                                <li>Allows task creation, rename, and deletion</li>
+                                <li>Keeps track of the number of tasks</li>
+                            </ul>
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://silvia-to-do-list.herokuapp.com/" target="blank">Try it live</a>
+                                </button>   
+                                <a href="https://github.com/silviatheweasel/To-Do-List-Pure-React" target="blank" class="git-link"><i class="fab fa-github"></i></a>
+                            </div>            
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="react-project" id="react-project-6">
+                        <img class="react-project-img" id="react-project-img-6" src="Resources/Media files/Images/kanban.jpg">
+                        <div class="show-on-hover" id="show-on-hover-6">
+                            <h3>Kanban </h3>
+                            <p class="react-project-intro">Create or remove lists and cards. Drag and drop cards to a different list. Just like with Trello!</p> 
+                            <div class="btn-container">
+                                <button class="try-btn">
+                                    <a href="https://silvia-react-kanban.herokuapp.com/" target="blank">Try it live</a>
+                                </button>    
+                                <button class="learn-more-btn" id="learn-more-btn-6">Learn more</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="react-project-details" id="react-project-details-6">
+                        <button class="close-btn close-windows">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+
+                        <div class="react-project-video">
+                            <video autoplay muted loop >
+                                <source src="Resources/Media files/Videos/kanban-demo.mp4">
+                                Your browser does not support the video tag.
+                            </video>  
+                        </div>
+
+                        <div class="react-intro-details">
+                            <h3>Kanban</h3>
+                            <p>A responsive minimalist web app made with React class components, styled with Sass, and deployed on Heroku.</p>
+                            <h4>Features</h4>
+                            <ul class="react-feature-list">
+                                <li>Supports list creation and deletion</li>
+                                <li>Supports card creation, rename, and deletion</li>
+                                <li>Supports card drag and drop</li>
+                            </ul>
+
+                            <div>
+                                <h4>APIs</h4>
+                                <ul class="react-tech-list">
+                                    <li>HTML Drag and Drop API</li>
+                                </ul>
+                            </div>  
+
+                            <div>
+                                <h4>Libraries</h4>
+                                <ul class="react-tech-list">
+                                    <li>React</li>
+                                </ul>
+                            </div>  
+
+                            <div class="app-links">
+                                <button class="try-btn detail-page-btn">
+                                    <a href="https://silvia-react-kanban.herokuapp.com/" target="blank">Try it live</a>
+                                </button>
+                                <a href="https://github.com/silviatheweasel/kanban-react" target="blank" class="git-link"><i class="fab fa-github"></i></a>  
+                            </div>   
+
+                        </div>
+
+                        <div class="react-tech">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-react"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-git"></i>
+                                <i class="fab fa-css3-alt"></i>
+                        </div>              
+                    </div>
+        
+                </div>
+
+            <!-- </div> -->
+
+            <!-- <button id="load-more-btn">More</button> -->
+
+            <!-- <div id="extra-react-projects"> -->
+
+                
+            <!-- </div>  -->
+        </section>
+
         <section id="projects">
-            <h2 class="projects-header show-on-scroll">Website Projects</h2>
-            <div id="slide-show">
+            <h2 class="projects-header show-on-scroll">Static Websites</h2>
+            <div id="slide-show" class="scroll-snap-point">
                 <div class="slideshow-container">
                     <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade" id ="image1">
+                    <div class="mySlides fade" id ="slide-image-1">
                     <img  src="./Resources/Media files/Images/image1.jpg" style="width:100%" alt="screenshot of a demo website Colmar Academy">
                     </div>
                 
-                    <div class="mySlides fade" id="image2">
+                    <div class="mySlides fade" id="slide-image-2">
                     <img src="./Resources/Media files/Images/image2.jpg" style="width:100%" alt="screenshot of a demo blog">
                     </div>
                 
-                    <div class="mySlides fade" id="image3"> 
+                    <div class="mySlides fade" id="slide-image-3"> 
                     <img src="./Resources/Media files/Images/image3.jpg" style="width:100%" alt="screenshot of a demo wensite BR Architects">
                     
                     </div>
@@ -88,9 +624,9 @@
                 
                 <!-- The dots/circles -->
                 <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot project-slider-dot" onclick="currentSlide(1)"></span>
+                    <span class="dot project-slider-dot" onclick="currentSlide(2)"></span>
+                    <span class="dot project-slider-dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
 
@@ -102,7 +638,7 @@
 
                 <div class="project-container" id="project-container-1">
                     <div class="project-video">
-                        <video controls autoplay muted loop >
+                        <video autoplay muted loop >
                             <source src="Resources/Media files/Videos/colmar acadamy.mp4">
                             Your browser does not support the video tag.
                         </video>  
@@ -129,7 +665,7 @@
 
                 <div class="project-container" id="project-container-2">
                     <div class="project-video">
-                        <video controls autoplay muted loop>
+                        <video autoplay muted loop>
                             <source src="Resources/Media files/Videos/my-blog.mp4">
                             Your browser does not support the video tag.
                         </video>  
@@ -156,7 +692,7 @@
 
                 <div class="project-container" id="project-container-3">
                     <div class="project-video">
-                        <video controls autoplay muted loop>
+                        <video autoplay muted loop>
                             <source src="Resources/Media files/Videos/BA architects.mp4">
                             Your browser does not support the video tag.
                         </video>  
@@ -184,106 +720,14 @@
             </div>
         </section>
 
-        <section id="react-projects">
-            <h2 class="react-projects-header show-on-scroll">Web App Projects</h2>
-            <div class="react-projects-container">
-
-                <!-- <div class="react-project" id="react-project-1">
-                    <img class="react-project-img" id="react-project-img-1" src="Resources/Media files/Images/text-processor.jpg">
-                    <div class="show-on-hover" id="show-on-hover-1">
-                        <h3>React text editor</h3> 
-                        <p class="react-project-intro">You can type or paste text into the box, and it will process it with your chosen methods.
-                        </p>
-                        <a href="https://github.com/silviatheweasel/text-processor" target="blank"><i class="fab fa-github"></i></a>
-                        <button class="watchBtn" id="watchBtn-1"><i class="fas fa-play-circle"></i></button>
-                    </div>
-                </div> -->
-
-               <div class="react-project" id="react-project-1">
-                <img class="react-project-img" id="react-project-img-1" src="Resources/Media files/Images/weather-app.jpg">
-                <div class="show-on-hover" id="show-on-hover-1">
-                    <h3>React weather app</h3> 
-                    <p class="react-project-intro">Get current, hourly, and daily weather forecast of your current location and any place you search for.
-                    </p>
-                    <button id="try-btn">
-                        <a href="https://silvia-weather-app.herokuapp.com/" target="blank">Try it live</a>
-                    </button>
-                    <button class="watchBtn" id="watchBtn-1"><i class="fas fa-play-circle"></i></button>
-                </div>
-            </div>
-
-                <div class="demo-video" id="demo-video-1">
-                    <button class="close-btn close-windows">
-                        <i id= "close" class="far fa-times-circle"></i>
-                    </button>
-                    <video controls autoplay muted loop>
-                        <source src="./Resources/Media files/Videos/Text editor demo.mp4">
-                        Your browser does not support the video tag.
-                    </video>  
-                    <div class="project-info">
-                        <p>This is a responsive web app built with </p>
-
-                    </div>                   
-                </div>
-
-                <div class="react-project" id="react-project-2">
-                    <img class="react-project-img" id="react-project-img-2" src="Resources/Media files/Images/kanban.jpg">
-                    <div class="show-on-hover" id="show-on-hover-2">
-                        <h3>React kanban </h3>
-                        <p class="react-project-intro">You can create and remove lists and items and drag and drop items, just like with Trello! <br><br>
-                            This project was entirely created by me and no additional libraries was used. </p> 
-                        <a href="https://github.com/silviatheweasel/kanban-react" target="blank" class="git-link"><i class="fab fa-github"></i></a>     
-                        <button class="watchBtn" id="watchBtn-2"><i class="fas fa-play-circle"></i></button>
-                    </div>
-                </div> 
-
-                <div class="demo-video" id="demo-video-2">
-                    <button class="close-btn close-windows">
-                        <i id= "close" class="far fa-times-circle"></i>
-                    </button>
-                    <video controls autoplay muted loop>
-                        <source src="./Resources/Media files/Videos/Kanban demo.mp4">
-                        Your browser does not support the video tag.
-                    </video>                     
-                </div>
-                
-                <div class="react-project" id="react-project-3">
-                    <img class="react-project-img" id="react-project-img-3" src="Resources/Media files/Images/pay-calculator.jpg">
-                    <div class="show-on-hover" id="show-on-hover-3">
-                        <h3>React payment calculator</h3> 
-                        <p class="react-project-intro">You can keep track and calculator your earnings.</p>
-                        <a href="https://github.com/silviatheweasel/Monthly-Pay-Calculator" target="blank" class="git-link"><i class="fab fa-github"></i></a>
-                        <button class="watchBtn" id="watchBtn-3"><i class="fas fa-play-circle"></i></button> 
-                    </div>
-                </div>
-
-                <div class="demo-video" id="demo-video-3">
-                    <button class="close-btn close-windows">
-                        <i id= "close" class="far fa-times-circle"></i>
-                    </button>
-                    <video controls autoplay muted loop>
-                        <source src="./Resources/Media files/Videos/Monthly pay calculator demo.mp4">
-                        Your browser does not support the video tag.
-                    </video>                     
-                </div>
-
-                <!-- <div class="react-propject">
-                    <img class="react-project-img" src="Resources/Media files/Images/to-do-list.jpg">
-                    <!-- <p>React to-do checklist</p> -->
-                    <!-- <p>It allows users to create and remove to-do items and move them between the "to do" and "done" lists.</p>
-                    <a href="https://github.com/silviatheweasel/To-Do-List-Pure-React" target="blank"><i class="fab fa-github"></i></a>
-                    <button class="watchBtn">Watch Demo</button> -->
-                <!-- </div>  -->
-
-            </div>
-        </section>
-
         <section id="about">
             <h2 class="about-header show-on-scroll">About</h2>
-            <div class="image-container show-on-scroll">
+            <div class="image-container show-on-scroll scroll-snap-point" id="about-image-container">
                 <img class= "show-on-scroll" src="./Resources/Media files/Images/Silvia-photo.jpg" alt="a close-up photo of web developer Silvia Lee">
             </div>
-            <p class= "show-on-scroll self-intro">I'm a budding front-end developer based in London, UK. I used to be a marketer but found my passion in coding and design in 2020, and made the brave career-change decision to become a web developer. <br><br>I'm familiar with the front-end development fundamentals of HTML5, CSS3 and JavaScript ES6, and up to date with TypeScript and JavaScript frameworks such as React. I'm also super excited to be learning new things every day!</p>
+            <p class= "show-on-scroll self-intro">Hey, I'm Silvia, a front-end developer based in London. 
+                <br></br> What's my story? I'm a veteran marketer with 10 years of experience. In 2020, I was introduced to the fantastic world of web development and decided that it is exactly what I want to do for the rest of my career. 
+                <br><br>I've mastered the front-end development fundamentals of HTML5, CSS3 and JavaScript ES6, and I'm up to date with modern libaries such as React. I'm also super excited to be learning new things every day!</p>
                 <ul class="skills show-on-scroll">
                     <li>
                         <div class="tech">HTML</div>
@@ -327,15 +771,13 @@
         </section>
 
         <section id="contact">
-            <h2 class="contact-header show-on-scroll">Contact Silvia</h2>
+            <h2 class="contact-header show-on-scroll scroll-snap-point">Contact Silvia</h2>
             <p>Drop me an email or follow me on social media if you want to reach out!</p>
             
             <div class="contact-social">
                 <a href="mailto:silvialeedavies.gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/silviatheweasel" target="blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/silvialeedavies/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.facebook.com/silvialeeart" target="blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/silvia_lee_art/" target="blank"><i class="fab fa-instagram"></i></a>
             </div>
 
             <button class="up-btn"><a href="#home"><i class="fas fa-chevron-circle-up"></i></a></button>
@@ -344,7 +786,6 @@
     </main>
 
     <footer>Copyright © 2020 Silvia Lee. All Rights Reserved</footer>
-
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>
