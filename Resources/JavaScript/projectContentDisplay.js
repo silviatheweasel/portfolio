@@ -158,11 +158,12 @@ const showCurrentSlide = (n) => {
   showSlide(currentSlideIndex = n);
 }
 
-window.addEventListener("load",function() {
-  document.getElementById("featured-slides-wrapper").style.width = `${window.screen.width * 4}px`;
+document.getElementById("featured-slides-wrapper").style.width = `${window.screen.width * 4}px`;
   for (let i = 0; i < featuredSlides.length; i ++) {
     featuredSlides[i].style.width = `${window.screen.width}px`;
   }
+
+window.addEventListener("load",function() {
   featuredDots[currentSlideIndex].className += " current";
 })
 
