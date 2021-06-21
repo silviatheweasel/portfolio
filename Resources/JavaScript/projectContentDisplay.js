@@ -158,7 +158,7 @@ const showCurrentSlide = (n) => {
   showSlide(currentSlideIndex = n);
 }
 
-document.getElementById("featured-slides-wrapper").style.width = `${window.screen.width * 4}px`;
+slideWrapper .style.width = `${window.screen.width * 4}px`;
   for (let i = 0; i < featuredSlides.length; i ++) {
     featuredSlides[i].style.width = `${window.screen.width}px`;
   }
