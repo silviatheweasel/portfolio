@@ -1189,7 +1189,7 @@ h3 {
 }
 
 .tech {
-    width: 100px;
+    width: 70px;
     text-align: center;
     padding: 0.3rem 0;
     background-color: #F24957;
@@ -1333,12 +1333,17 @@ footer {
     font-size: 0.7rem;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen 
+    and (max-width: 1050px)
+    and (orientation: portrait) {
     .desktop {
         display: none;
     }
     .slide-para {
         color: rgb(41, 41, 41);
+    }
+    .featured-project-img {
+        object-fit: contain;
     }
     nav .burger-nav {
         display: block;
@@ -1356,7 +1361,6 @@ footer {
     nav .mobile {
         width: 100%;
         display: block;
-        /* background-color: #44465B; */
         background-color: #F24957;
         overflow: hidden;
         height: 0;
@@ -1377,7 +1381,6 @@ footer {
         text-decoration: none;
         width: 100%;
         display: block;
-        /* color: #F24957; */
         color: white;
     }  
     .mobile a:hover,
@@ -1470,7 +1473,42 @@ footer {
     }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen 
+    and (max-width: 1050px)
+    and (orientation: landscape) {
+        .slide-text-container {
+            right: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 50px 30px;
+        }
+        .slide-right-container {
+            padding: 80px;
+        }
+        #featured-right-btn {
+            opacity: 1;
+        }
+}
+
+@media only screen 
+    and (min-device-width: 1366px) 
+    and (max-device-width: 1366px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .my-name {
+            grid-area: 2 / 2 / span 5 / span 5;
+        }
+        .chinese-name {
+            grid-area: 4 / 3 / span 2 / span 3;
+            margin-top: 0;
+        }
+        #featured-right-btn {
+            opacity: 1;
+        }
+  }
+
+@media only screen 
+    and (max-width: 780px) {
     #featured-right-btn {
         opacity: 1;
     }
@@ -1581,8 +1619,184 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 836px) 
+  and (orientation: landscape) { 
+    .hide-on-mobile, .desktop {
+        display: none;
+    }
+    .show-on-mobile {
+        display: block;
+        padding: 30px 30px 0 30px;
+    }
+    .featured-project-img {
+        object-fit: contain;
+        width: 70%;
+        height: auto;
+    }
+    nav .burger-nav {
+        display: block;
+        width: 100%;
+        padding: 0 20px 0 20px;
+        text-align: right;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    nav {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav .mobile {
+        width: 100%;
+        display: block;
+        background-color: #F24957;
+        overflow: hidden;
+        height: 0;
+        font-size: 24px;
+    }
+    .mobile a:hover,
+    .mobile a:active { 
+        color:#F4D2BD; 
+    }
+    nav .mobile.open {
+        height: 100vh;
+        padding: 30px 80px;
+        transition: 0.5s ease-in-out;
+    }
+    nav .mobile li {
+        display: block;
+        float: none;
+        width: 100%; 
+        list-style-type: none;
+        margin: 10px;
+        font-size: 25px;
+        padding: 0;
+    }
+    nav .mobile li a {
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        color: white;
+    }  
+    .banner {
+        height: 200vh;
+    }
+    .chinese-name {
+        display: none;
+    }
+    .my-name {
+        margin-top: 2rem;
+    }
+    .my-intro {
+        grid-area: 4 / 1 / span 3 / span 12;
+        padding: 0 30px 30px 30px;
+        margin-top: 0;
+    }
+    #home {
+        height: 200vh;
+    }
+    .slide-text-container {
+        padding: 0 30px;
+    }
+    .featured-slide {
+        height: 100vh;
+    }
+    #featured-slide-3 {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+    .slide-demo {
+        margin-left: 40px;
+        width: 40%;
+        margin-top: 0;
+    }
+    .show-on-mobile {
+        padding: 0 40px 30px 40px;
+    }
+    .slide-left-container {
+        margin: 40px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 3fr));
+    }
+    .logo {
+        height: 30px;
+    }
+    #about {
+        height: 250vh;
+    }
+    .self-intro {
+        grid-area: 2 / 5 / span 3 / span 7;
+    }
+    .skills {
+        grid-area: 4 / 2 / span 5 / span 12;
+        margin: 30px 0 0 0;
+    }
+    .skills li {
+        margin-bottom: 0;
+    }
+    .image-container {
+        padding-top: 0;
+        height: 9rem;
+        width: 9rem;
+        grid-area: 2 / 2 / span 2 / span 3;
+        margin-top: 40px;
+    }
+    .image-container img {
+        height: 9rem;
+    }
+    .bar {
+        width: 80%;
+    }
+    .project-video video {
+        max-width: 80%;
+    }
+    .project-container {
+        width: 80%;
+        padding: 30px 0;
+    }
+    .project-video {
+        grid-area: 1 / 1 / span 4 / span 5;
+    }
+    .project-intro {
+        grid-area: 5 / 1 / span 4 / span 5;
+        padding-top: 0;
+    }
+    .project-images {
+        grid-area: 1 / 8 / span 4 / span 4;
+        padding-top: 0;
+    }
+    .next-btn {
+        right: 0;
+        top: 40vh;
+    }
+    .previous-btn {
+        left: 0;
+        top: 40vh;
+    }
+    #close {
+        margin-right: 0;
+    }
+    .close-windows {
+        margin: 0;
+    }
+    .close-windows i {
+        padding: 10px;
+    }
+    #featured-right-btn {
+        font-size: 35px;
+    }
+    .screenshot {
+        width: 15%;
+        object-fit: contain;
+    }
+}
 
-@media only screen and (max-width: 550px) {
+@media only screen 
+    and (max-width: 550px)
+    and (orientation: portrait)  {
     .hide-on-mobile {
         display: none;
     }
@@ -1811,11 +2025,24 @@ footer {
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen 
+    and (max-width: 420px)
+    and (orientation: portrait) {
     #about {
         padding: 0;
     }
     .featured-slide {
         height: 600px;
+    }
+    #home {
+        height: 700px;
+    }
+    .fa-bars:before {
+        content: "\f0c9";
+        font-size: 30px;
+        margin: 0;
+    }
+    .chinese-name {
+        display: none;
     }
 }
