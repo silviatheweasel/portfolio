@@ -17,65 +17,58 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" defer></script>
     <script src="Resources/JavaScript/projectContentDisplay.js" defer></script>
     <script src="Resources/JavaScript/ping.js" defer></script>
+    <script src="Resources/JavaScript/highlightonScroll.js" defer></script>
     <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <header id="home">
-        <nav>
-            <div class="burger-nav" id="burger-nav"><i class="fas fa-bars"></i></div>
-            <ul class="desktop" id="desktop-menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#featured-slides-wrapper">FEATURED PROJECT</a></li>
-                <li><a href="#react-projects-container">REACT WEB APPS</a></li>
-                <li><a href="#slide-show">STATIC WEBSITES</a></li>
-                <li><a href="#about-image-container">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <ul class="mobile" id="mobile-menu">
-                <li class="menu-item"><a href="#home">HOME</a></li>
-                <li class="menu-item"><a href="#featured-project">FEATURED PROJECT</a></li>
-                <li class="menu-item"><a href="#react-projects">REACT WEB APPS</a></li>
-                <li class="menu-item"><a href="#projects">STATIC WEBSITES</a></li>
-                <li class="menu-item"><a href="#about">ABOUT</a></li>
-                <li class="menu-item"><a href="#contact">CONTACT</a></li>
-            </ul>
-            
-        </nav>
-        <div class="banner">
-            <div class= "my-name show-on-scroll">
-                <div class="silvia show-on-scroll">
-                    <div class="initial-s">S</div>
-                    <div class="letter-i">
-                        <i class="fas fa-circle" id="circle"></i>
-                        <div class="rectangle"></div>
-                    </div>                  
-                    <div class="lvia">lvia</div>
+    <header>
+        <section class="home" id="home">
+            <nav>
+                <div class="burger-nav" id="burger-nav"><i class="fas fa-bars"></i></div>
+                <ul class="desktop" id="desktop-menu">
+                    <li class="home menu-item active"><a href="#home">HOME</a></li>
+                    <li class="featured-project menu-item"><a href="#featured-project">FEATURED PROJECT</a></li>
+                    <li class="react-projects menu-item"><a href="#react-projects">REACT WEB APPS</a></li>
+                    <li class="projects menu-item"><a href="#projects">STATIC WEBSITES</a></li>
+                    <li class="about menu-item"><a href="#about">ABOUT</a></li>
+                    <li class="contact menu-item"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="banner">
+                <div class= "my-name show-on-scroll">
+                    <div class="silvia show-on-scroll">
+                        <div class="initial-s">S</div>
+                        <div class="letter-i">
+                            <i class="fas fa-circle" id="circle"></i>
+                            <div class="rectangle"></div>
+                        </div>                  
+                        <div class="lvia">lvia</div>
+                    </div>
+                    <div class="lee show-on-scroll">Lee</div>
                 </div>
-                <div class="lee show-on-scroll">Lee</div>
-            </div>
-            <div class="chinese-name show-on-scroll">
-                <div class="chinese-surname show-on-scroll">李</div>
-                <div class="chinese-firstname show-on-scroll">雪</div>
-            </div>
-            <div class = "my-intro show-on-scroll">
-                <h1>Hi, I'm Silvia, <br> a web developer.</h1>
-                <p>I'm a front end developer / designer based in London.<br><br>I love creating beautiful and responsive websites with JavaScript (vanilla and React), HTML, CSS (Sass), and TypeScript.</p>
-                <div class="tech-stack">
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <img src="Resources/Media files/Images/typescript-logo.jpg" alt="typescript logo" id="typescript-logo">
-                    <i class="fab fa-react"></i>
-                    <i class="fab fa-sass"></i>
-                    <i class="fab fa-git"></i>
-
+                <div class="chinese-name show-on-scroll">
+                    <div class="chinese-surname show-on-scroll">李</div>
+                    <div class="chinese-firstname show-on-scroll">雪</div>
+                </div>
+                <div class = "my-intro show-on-scroll">
+                    <h1>Hi, I'm Silvia, <br> a web developer.</h1>
+                    <p>I'm a front end developer / designer based in London.<br><br>I love creating beautiful and responsive websites with JavaScript (vanilla and React), HTML, CSS (Sass), and TypeScript.</p>
+                    <div class="tech-stack">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                        <img src="Resources/Media files/Images/typescript-logo.jpg" alt="typescript logo" id="typescript-logo">
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-sass"></i>
+                        <i class="fab fa-git"></i>
+    
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </header>
-
     <main>
-        <section id="featured-project">
+        <section class="featured-project" id="featured-project">
             <h2 class="react-projects-header show-on-scroll" id="featured-header">Featured Project</h2>
             <div id="featured-slides-wrapper">
                 <div class="featured-slide">
@@ -179,7 +172,7 @@
 
         </section>
 
-        <section id="react-projects" class="scroll-snap-point">
+        <section id="react-projects" class="react-projects">
             <h2 class="react-projects-header show-on-scroll">React Web Apps</h2>
 
             <div id="react-projects-container">
@@ -597,7 +590,7 @@
             <!-- </div>  -->
         </section>
 
-        <section id="projects">
+        <section id="projects" class="projects">
             <h2 class="projects-header show-on-scroll">Static Websites</h2>
             <div id="slide-show" class="scroll-snap-point">
                 <div class="slideshow-container">
@@ -720,7 +713,7 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="about">
             <h2 class="about-header show-on-scroll">About</h2>
             <div class="image-container show-on-scroll scroll-snap-point" id="about-image-container">
                 <img class= "show-on-scroll" src="./Resources/Media files/Images/Silvia-photo.jpg" alt="a close-up photo of web developer Silvia Lee">
@@ -770,7 +763,7 @@
                 </ul>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact">
             <h2 class="contact-header show-on-scroll scroll-snap-point">Contact Silvia</h2>
             <p>Drop me an email or follow me on social media if you want to reach out!</p>
             

@@ -3,13 +3,13 @@
     padding: 0;
     margin: 0;
     outline: none;
-    /* border: 1px solid red; */
     -webkit-tap-highlight-color: transparent;
 }
 
 button {
     border: none;
     outline: none;
+    inset: none;
 }
 
 *:focus, *:active {
@@ -31,7 +31,6 @@ html {
 }
 
 body {
-    max-width: 1700px;
     overflow-x: hidden;
     margin: 0 auto;
     background-color: white;
@@ -63,10 +62,6 @@ nav .desktop {
     float: right;
 }
 
-nav .mobile {
-    display: none;
-}
-
 nav .desktop li {
     list-style-type: none;
     float: left;
@@ -75,6 +70,14 @@ nav .desktop li {
 nav .desktop li a {
     text-decoration: none;
     color: #F24957;
+}
+
+.desktop .active {
+    background-color: transparent !important;
+}
+
+.desktop .active a {
+    color: #F4D2BD; 
 }
 
 .desktop a:hover,
@@ -515,7 +518,7 @@ ul li p {
 
 #projects {
     background-color: rgb(238, 238, 238);
-    padding: 30px 0;
+    padding: 4rem 0;
 }
 
 .projects-header {
@@ -523,7 +526,7 @@ ul li p {
     font-family: "work sans", sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     color: #010326;
     background-color: none;
     /* display: none; */
@@ -882,7 +885,7 @@ color: #F24957;
     grid-template: repeat(6, 1fr) / repeat(12, 1fr);
     height: 900px;
     width: 100%;
-    padding-top: 2.5rem;
+    padding-top: 4rem;
 }
 
 .image-container {
@@ -1260,7 +1263,7 @@ h3 {
 #contact {
     background-color: #010326;
     text-align: center;
-    padding-bottom: 5rem;
+    padding: 5rem;
 }
 #contact h2 {
     text-align: center;
@@ -1329,16 +1332,49 @@ footer {
     background-color: #010326;
     color: #F4D2BD;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 0.7rem;
 }
 
 @media only screen 
+    and (min-width: 1500px) {
+        #featured-slides-wrapper {
+            padding-top: 60px;
+        }
+        .slide-text-container {
+            right: 10%;
+        }
+        .featured-slide {
+            height: 750px;
+        }
+        .featured-project-img {
+            object-fit: contain;
+        }
+        .slide-right-container {
+            padding: 80px;
+            margin: 0 20%;
+        }
+        .slide-demo {
+            height: 100%;
+            width: auto;
+            margin-top: 0;
+        }
+        .logo {
+            height: 80px;
+        }
+        .slide-left-container {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            column-gap: 30px;
+        }
+        .tech {
+            width: 120px;
+        }
+        
+    }
+
+@media only screen 
     and (max-width: 1050px)
     and (orientation: portrait) {
-    .desktop {
-        display: none;
-    }
     .slide-para {
         color: rgb(41, 41, 41);
     }
@@ -1358,7 +1394,7 @@ footer {
         margin: 0;
         padding: 0;
     }
-    nav .mobile {
+    nav .desktop {
         width: 100%;
         display: block;
         background-color: #F24957;
@@ -1372,27 +1408,27 @@ footer {
         margin: 30px;
     }
 
-    nav .mobile li {
+    nav .desktop li {
         list-style-type: none;
         margin: 10px;
         font-size: 35px;
     }
-    nav .mobile li a {
+    nav .desktop li a {
         text-decoration: none;
         width: 100%;
         display: block;
         color: white;
     }  
-    .mobile a:hover,
-    .mobile a:active { 
+    .desktop a:hover,
+    .desktop a:active { 
         color:#F4D2BD; 
     }
-    nav .mobile.open {
+    nav .desktop.open {
         height: 100vh;
         padding: 80px;
         transition: 0.5s ease-in-out;
     }
-    nav .mobile li {
+    nav .desktop li {
         display: block;
         float: none;
         width: 100%; 
@@ -1623,7 +1659,7 @@ footer {
   and (min-device-width: 414px) 
   and (max-device-width: 836px) 
   and (orientation: landscape) { 
-    .hide-on-mobile, .desktop {
+    .hide-on-mobile {
         display: none;
     }
     .show-on-mobile {
@@ -1648,7 +1684,7 @@ footer {
         margin: 0;
         padding: 0;
     }
-    nav .mobile {
+    nav .desktop {
         width: 100%;
         display: block;
         background-color: #F24957;
@@ -1656,16 +1692,16 @@ footer {
         height: 0;
         font-size: 24px;
     }
-    .mobile a:hover,
-    .mobile a:active { 
+    .desktop a:hover,
+    .desktop a:active { 
         color:#F4D2BD; 
     }
-    nav .mobile.open {
+    nav .desktop.open {
         height: 100vh;
         padding: 30px 80px;
         transition: 0.5s ease-in-out;
     }
-    nav .mobile li {
+    nav .desktop li {
         display: block;
         float: none;
         width: 100%; 
@@ -1674,7 +1710,7 @@ footer {
         font-size: 25px;
         padding: 0;
     }
-    nav .mobile li a {
+    nav .desktop li a {
         text-decoration: none;
         width: 100%;
         display: block;
@@ -1817,11 +1853,11 @@ footer {
         font-size: 35px;
         margin: 0;
     }
-    nav .mobile.open {
+    nav .desktop.open {
         padding: 80px 30px;
         height: 100vh;       
     }
-    nav .mobile li a {
+    nav .desktop li a {
         padding: 10px 0;
         font-size: 30px;
     }
@@ -2013,11 +2049,11 @@ footer {
     .project-container {
         height: 100vh;
     }
-    nav .mobile.open {
+    nav .desktop.open {
         padding: 30px;
         font-size: 20px;
     }
-    nav .mobile li a {
+    nav .desktop li a {
         padding: 0;
     }
     .menu-item {
