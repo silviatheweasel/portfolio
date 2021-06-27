@@ -16,7 +16,13 @@ burgerNav.addEventListener("click", () => {
 
 if (!menu.className.includes("open")) {
     for (let i = 0; i < menuItems.length; i++) {
-        menuItems[i].addEventListener("click", () => menu.className = "desktop");
-        menuItems[i].removeEventListener("click", () => menu.className = "desktop");
+        menuItems[i].addEventListener("click", () => {
+            menu.className = "desktop";
+            burgerNav.classList.remove("close-icon");
+        });
+        menuItems[i].removeEventListener("click", () => {
+            menu.className = "desktop";
+            burgerNav.classList.remove("close-icon");
+        });
     }
 }
