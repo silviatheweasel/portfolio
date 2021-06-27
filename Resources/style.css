@@ -39,13 +39,6 @@ body {
 main {
     scroll-snap-align: start;
 }
-
-header {
-    background-color: #010326;
-    color: white;
-    height: 100vh;
-}
-
 nav {
     background-color:  #010326;
     position: fixed;
@@ -58,8 +51,53 @@ nav {
 .burger-nav {
     display: none;
 }
+
+nav .burger-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin: 20px;
+    float: right;
+    transition: all 0.5s ease-in-out;
+}
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.burger-icon::before {
+    content: "";
+    transform: translateY(-20px);
+}
+
+.burger-icon::after {
+    content: "";
+    transform: translateY(15px);
+}
+
+.close-icon .burger-icon {
+    background-color: transparent;
+}
+
+.close-icon .burger-icon::before {
+    transform: rotate(45deg);
+}
+
+.close-icon .burger-icon::after {
+    transform: rotate(-45deg) translate(4px,-4px);
+}
+
 nav .desktop {
     float: right;
+    transition: 0.5s ease-in-out;
 }
 
 nav .desktop li {
@@ -1263,7 +1301,7 @@ h3 {
 #contact {
     background-color: #010326;
     text-align: center;
-    padding: 5rem;
+    padding: 5rem 0;
 }
 #contact h2 {
     text-align: center;
@@ -1382,13 +1420,9 @@ footer {
         object-fit: contain;
     }
     nav .burger-nav {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        text-align: right;
-        font-size: 2rem;
-        cursor: pointer;
+        display: flex;
     }
+
     nav {
         width: 100%;
         margin: 0;
@@ -1401,11 +1435,7 @@ footer {
         overflow: hidden;
         height: 0;
         font-size: 24px;
-    }
-    .fa-bars:before {
-        content: "\f0c9";
-        font-size: 50px;
-        margin: 30px;
+        transition: 0.5s ease-in-out;
     }
 
     nav .desktop li {
@@ -1434,6 +1464,8 @@ footer {
         width: 100%; 
     }
     #home {
+        background-color: #010326;
+        color: white;
         height: 100vh;
     }
     .my-name {
@@ -1691,6 +1723,7 @@ footer {
         overflow: hidden;
         height: 0;
         font-size: 24px;
+        transition: 0.5s ease-in-out;
     }
     .desktop a:hover,
     .desktop a:active { 
@@ -1699,7 +1732,6 @@ footer {
     nav .desktop.open {
         height: 100vh;
         padding: 30px 80px;
-        transition: 0.5s ease-in-out;
     }
     nav .desktop li {
         display: block;
@@ -1833,6 +1865,16 @@ footer {
 @media only screen 
     and (max-width: 550px)
     and (orientation: portrait)  {
+    nav .burger-nav {
+        height: 35px;
+        width: 35px;
+    }
+    .burger-icon::after {
+        transform: translateY(10px);
+    }
+    .burger-icon::before {
+        transform: translateY(-15px);
+    }
     .hide-on-mobile {
         display: none;
     }
@@ -2064,6 +2106,7 @@ footer {
 @media only screen 
     and (max-width: 420px)
     and (orientation: portrait) {
+    
     #about {
         padding: 0;
     }
