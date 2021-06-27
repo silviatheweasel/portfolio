@@ -7,8 +7,10 @@ burgerNav.addEventListener("click", () => {
     isOpen = !isOpen;
     if (isOpen) {
         menu.classList.add("open");
+        burgerNav.classList.add("close-icon");
     } else {
         menu.classList.remove("open");
+        burgerNav.classList.remove("close-icon");
     }
 });
 
