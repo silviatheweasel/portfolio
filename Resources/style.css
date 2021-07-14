@@ -165,11 +165,12 @@ nav .desktop li a {
 }
 
 #circle {
-    font-size: 0.7rem;
-    color: #F24957;
+    height: 0.7rem;
+    width: 0.7rem;
+    top: 1.1rem;
     position: absolute;
-    top: 1.6rem;
-    width: 0.7rem; 
+    border-radius: 50%;
+    background: #F24957;
     animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
 }
